@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DA8A39222FAF75F800FEE77A /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = DA8A39212FAF75F800FEE77A /* GoogleMaps */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DA8A39002FAF664300FEE77A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8A39222FAF75F800FEE77A /* GoogleMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 				DA8A38F42FAF664100FEE77A /* smartbirds-ios */,
 				DA8A39022FAF664300FEE77A /* smartbirds-iosTests */,
 				DA8A390C2FAF664300FEE77A /* smartbirds-iosUITests */,
+				DA8A39202FAF75F300FEE77A /* Frameworks */,
 				DA8A38F32FAF664100FEE77A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +96,13 @@
 				DA8A39092FAF664300FEE77A /* smartbirds-iosUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DA8A39202FAF75F300FEE77A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +125,7 @@
 			);
 			name = "smartbirds-ios";
 			packageProductDependencies = (
+				DA8A39212FAF75F800FEE77A /* GoogleMaps */,
 			);
 			productName = "smartbirds-ios";
 			productReference = DA8A38F22FAF664100FEE77A /* smartbirds-ios.app */;
@@ -195,6 +209,9 @@
 			);
 			mainGroup = DA8A38E92FAF664100FEE77A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DA8A391C2FAF6D7C00FEE77A /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DA8A38F32FAF664100FEE77A /* Products */;
 			projectDirPath = "";
@@ -570,6 +587,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA8A391C2FAF6D7C00FEE77A /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 10.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA8A39212FAF75F800FEE77A /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA8A391C2FAF6D7C00FEE77A /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA8A38EA2FAF664100FEE77A /* Project object */;
 }

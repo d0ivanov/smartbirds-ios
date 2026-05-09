@@ -5,20 +5,28 @@
 //  Created by Dobromir Ivanov on 9.05.26.
 //
 
+
 import SwiftUI
+import GoogleMaps
 
 struct ContentView: View {
+    // Initial options - set once at creation
+    private let mapOptions: GMSMapViewOptions = {
+        var options = GMSMapViewOptions()
+        return options
+    }()
+    
+    // Runtime updatable property
+    @State private var newCamera: GMSCameraPosition?
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            GoogleMapView(options: mapOptions)
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
 }
+
